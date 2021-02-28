@@ -33,12 +33,12 @@ const RocketType = new GraphQLObjectType({
 });
 
 //Root Query
-
 const RootQuery = new GraphQLObjectType({
   name: "RootQueryType",
   fields: {
+    
+    // Launch Query
     launches: {
-      // Launch Query
       type: new GraphQLList(LaunchType),
       resolve(parent, args) {
         return axios
@@ -57,6 +57,7 @@ const RootQuery = new GraphQLObjectType({
           .then((res) => res.data);
       },
     },
+    
     // Rocket Query
     rockets: {
       type: new GraphQLList(RocketType),

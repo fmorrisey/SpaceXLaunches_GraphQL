@@ -2,27 +2,30 @@ import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-
 import "./App.css";
 import logo from "./logo.png";
 
-import Launches from "./components/launches"
+import Launches from "./components/launches";
+import Mission from "./components/mission";
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000/graphql"
-})
+  uri: "http://localhost:4000/graphql",
+});
 
 function App() {
   return (
     <ApolloProvider client={client}>
-    <div className="App">
-      <img
-        src={logo}
-        alt="SpaceX"
-        style={{ width: 300, display: "block", margin: "auto" }}
-      />
-      <Launches />
-    </div>
+      <Router>
+        <div className="App">
+          <img
+            src={logo}
+            alt="SpaceX"
+            style={{ width: 300, display: "block", margin: "auto" }}
+          />
+          <Route exact path="/" component={Launches} />
+          <Route exact path="/launch/:flight_number" component={Mission} />
+        </div>
+      </Router>
     </ApolloProvider>
   );
 }

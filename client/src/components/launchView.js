@@ -16,7 +16,7 @@ export default function launchView({ launch: { flight_number, mission_name, laun
                     <p>Date: <Moment format="YYYY-MM-DD HH:mm">{launch_date_local}</Moment></p>
                 </div>
                 <div className="col-md-3">
-                    <button className="btn btn-secondary">Mission Details</button>
+                    <button className="btn btn-secondary">Details</button>
                 </div>
             </div>
         </div>

@@ -1,5 +1,7 @@
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
 
 import "./App.css";
 import logo from "./logo.png";

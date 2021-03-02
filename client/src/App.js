@@ -5,8 +5,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import logo from "./logo.png";
 
-import Launches from "./components/launches";
-import Mission from "./components/mission";
+import Launches from "./components/Launches";
+import Mission from "./components/Mission";
 
 const client = new ApolloClient({
   uri: "http://localhost:4000/graphql",

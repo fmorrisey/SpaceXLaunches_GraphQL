@@ -3,8 +3,8 @@ import React, { Fragment } from 'react';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 
-import LaunchView from'./launchView'
-import MissionKey from'./missionKey';
+import LaunchView from'./LaunchView'
+import MissionKey from'./MissionKey';
 
 const LAUNCHES_QUERY = gql
 `

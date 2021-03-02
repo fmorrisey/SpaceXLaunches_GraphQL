@@ -9,7 +9,7 @@ import Launches from "./components/Launches";
 import Mission from "./components/Mission";
 
 const client = new ApolloClient({
-  uri: "/graphql",
+  uri: "http://localhost:4000/graphql",
 });
 
 function App() {
